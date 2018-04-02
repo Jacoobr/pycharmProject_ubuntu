@@ -23,7 +23,7 @@ biases = tf.Variable(tf.zeros([1]), dtype=np.float32) #create the biases tensor
 y = x_data * weights + biases #operate the rule
 
 #define loss
-loss = tf.reduce_mean(tf.square(y_data - y))    # (y_data - y)^2 / len(x_data)
+loss = tf.reduce_mean(tf.square(y_data - y))    # 分类器：(y_data - y)^2 / len(x_data)
 optimizer = tf.train.GradientDescentOptimizer(0.5) #use the GDO optimizer-> then make the loss be minimum; the learning rate is 0.5
 train = optimizer.minimize(loss)    #the optimizer make the loss be minimum
 init = tf.initialize_all_variables()    #initialize all varibles
