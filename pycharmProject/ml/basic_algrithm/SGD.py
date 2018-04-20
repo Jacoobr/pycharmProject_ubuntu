@@ -2,6 +2,12 @@
 '''
 SGD算法 产考：http://blog.csdn.net/pengjian444/article/details/71075544#reply
 numpy
+Mini-batch SGD
+LOOP:
+1.Sample a batch of data
+2.Forward prop it through the graph, get loss
+3.Backprop to calculate the gradient
+4.Update the parameters using the gradient(loss)
 '''
 import numpy as np
 import matplotlib.pyplot as plt
